@@ -1,0 +1,240 @@
+.about-section{
+    background-color: #121212;
+    color: white;
+    position: relative;
+    padding: 150px 0 90px; /* Yüksekliği artırdık */
+    min-height: 700px; /* Sabit minimum yükseklik */
+}
+
+h1, h2, h3, h4, h5, h6,
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    color: #e0e0e0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Section Title */
+.sec-title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 60px;
+}
+
+.sec-title .title {
+    display: block;
+    font-size: 24px;
+    line-height: 24px;
+    color: #ff2222;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+.sec-title h2 {
+    display: block;
+    font-size: 40px;
+    line-height: 1.28em;
+    font-weight: 600;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.sec-title h2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #ff2222;
+}
+
+.sec-title .text {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 35px;
+}
+
+.list-style-one li {
+    position: relative;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    padding-left: 35px;
+    margin-bottom: 12px;
+}
+
+.list-style-one li:before {
+    content: "\f058";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    color: #ff2222;
+}
+
+/* Button */
+.btn-style-one {
+    display: inline-block;
+    font-size: 17px;
+    line-height: 30px;
+    padding: 10px 30px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    background-color: #ff2222;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-style-one:hover {
+    background-color: #ff5252;
+    color: #fff;
+}
+
+/* About Section */
+.about-section {
+    position: relative;
+    padding: 120px 0 70px;
+}
+
+.about-section .content-column {
+    margin-bottom: 50px;
+}
+
+.about-section .content-column .inner-column {
+    padding-left: 30px;
+}
+
+.about-section .image-column .inner-column {
+    position: relative;
+    padding-left: 120px;
+    padding-bottom: 125px;
+}
+
+/* Image positions */
+.about-section .image-column .image-1 {
+    position: relative;
+}
+
+.about-section .image-column .image-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.about-section .image-column .image-1 img,
+.about-section .image-column .image-2 img {
+    box-shadow: 0 30px 50px rgba(8,13,62,.15);
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-section .content-column,
+    .about-section .image-column {
+        order: unset !important;
+        padding: 0 15px;
+    }
+
+    .about-section .image-column .inner-column {
+        padding-left: 0;
+        padding-bottom: 50px;
+    }
+
+    .about-section .image-column .image-2 {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sec-title h2 {
+        font-size: 30px;
+    }
+
+    .sec-title .text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .about-section {
+        padding: 80px 0 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sec-title h2 {
+        font-size: 24px;
+    }
+
+    .btn-style-one {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+
+
+/* ==== SCROLL İLE ANİMASYON ==== */
+
+.about-section .content-column .inner-column,
+.about-section .image-column .inner-column,
+.about-section .text p,
+.about-section .list-style-one li,
+.about-section .btn-box,
+.about-section .image-column figure {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+/* Görününce animasyon başlasın */
+.about-section.animate .content-column .inner-column,
+.about-section.animate .image-column .inner-column,
+.about-section.animate .text p,
+.about-section.animate .list-style-one li,
+.about-section.animate .btn-box,
+.about-section.animate .image-column figure {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gecikmelerle sıralı efekt */
+.about-section.animate .text p:nth-child(1) { transition-delay: 0.1s; }
+.about-section.animate .text p:nth-child(2) { transition-delay: 0.2s; }
+.about-section.animate .text p:nth-child(3) { transition-delay: 0.3s; }
+.about-section.animate .text p:nth-child(4) { transition-delay: 0.4s; }
+.about-section.animate .text p:nth-child(5) { transition-delay: 0.5s; }
+.about-section.animate .list-style-one li:nth-child(1) { transition-delay: 0.6s; }
+.about-section.animate .list-style-one li:nth-child(2) { transition-delay: 0.7s; }
+.about-section.animate .list-style-one li:nth-child(3) { transition-delay: 0.8s; }
+.about-section.animate .list-style-one li:nth-child(4) { transition-delay: 0.9s; }
+.about-section.animate .btn-box { transition-delay: 1s; }
+
+/* Görseller için küçük scale efekti */
+.about-section .image-column figure {
+  transform: scale(0.9);
+}
+.about-section.animate .image-column figure {
+  transform: scale(1);
+  transition-delay: 0.4s;
+}

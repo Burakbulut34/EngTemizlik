@@ -1,0 +1,110 @@
+.services-section {
+  background-color: #121212;
+  color: #f5f5f5;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  top: 50px;
+}
+
+.service-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  padding: 0 20px;
+}
+
+/* === GENEL HİZMET KUTULARI === */
+.service-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.service-box.reverse {
+  flex-direction: row-reverse;
+}
+
+/* === GÖRSEL === */
+.service-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-image img:hover {
+  transform: scale(1.03);
+}
+
+/* === METİN === */
+.service-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-content h2 {
+  font-size: 2rem;
+  color: #ff3333;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.service-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1d1d1;
+  margin-bottom: 25px;
+}
+
+/* === BUTON === */
+.service-btn {
+  background: linear-gradient(135deg, #ff2222, #ff5252);
+  border: none;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-btn:hover {
+  background: linear-gradient(135deg, #ff5252, #ff2222);
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .service-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-box.reverse {
+    flex-direction: column;
+  }
+
+  .service-content {
+    padding-top: 20px;
+  }
+
+  .service-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .service-content p {
+    font-size: 1rem;
+  }
+}

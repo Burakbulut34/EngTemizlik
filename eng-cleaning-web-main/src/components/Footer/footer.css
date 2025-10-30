@@ -1,0 +1,201 @@
+:root {
+  --bg-color: #0e0e10;
+  --text-color: #d7d7d7;
+  --accent-color: #00a884; /* WhatsApp yeşili */
+  --link-hover: #1ad977;
+  --title-color: #ffffff;
+  --font-main: 'Poppins', sans-serif;
+  --font-color: #ff2222;
+  --font-color-hover: #ff5252;
+}
+
+.mrf {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  padding: 80px 10% 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mrf__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1300px;
+  gap: 40px;
+}
+
+/* ===== Sol Kısım ===== */
+.mrf__col--left {
+  flex: 1 1 350px;
+  max-width: 400px;
+}
+
+.mrf__logo {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.mrf__about p {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #c9c9c9;
+  margin-bottom: 25px;
+}
+
+.mrf__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.mrf__whatsapp:hover {
+  background: var(--link-hover);
+  transform: translateY(-3px);
+}
+
+/* ===== Orta Kısım ===== */
+.mrf__col--mid {
+  flex: 1 1 200px;
+  text-align: left;
+}
+
+.mrf__title {
+  font-size: 1.3rem;
+  color: var(--title-color);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.mrf__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 45px;
+  height: 2px;
+  background: var(--font-color);
+  border-radius: 2px;
+}
+
+.mrf__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mrf__links li {
+  margin-bottom: 10px;
+}
+
+.mrf__links a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.mrf__links a:hover {
+  color: var(--font-color-hover);
+}
+
+/* ===== Sağ Kısım ===== */
+.mrf__col--right {
+  flex: 1 1 250px;
+  text-align: left;
+}
+
+.mrf__socials {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.mrf__socials a {
+  font-size: 1.6rem;
+  color: var(--font-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mrf__socials a:hover {
+  color: var(--font-color-hover);
+  transform: scale(1.2) translateY(-3px);
+}
+
+.mrf__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #a1a1a1;
+  font-size: 0.9rem;
+}
+
+.mrf__copy small:last-child {
+  color: var(--link-color);
+  font-weight: 500;
+}
+
+/* ===== Responsive Ayarlar ===== */
+@media (max-width: 1024px) {
+  .mrf__inner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .mrf__col--left,
+  .mrf__col--mid,
+  .mrf__col--right {
+    max-width: 100%;
+  }
+
+  .mrf__title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mrf__socials {
+    justify-content: center;
+  }
+
+  .mrf__whatsapp {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .mrf {
+    padding: 60px 6% 40px;
+  }
+
+  .mrf__logo {
+    font-size: 2.2rem;
+  }
+
+  .mrf__about p {
+    font-size: 0.95rem;
+  }
+
+  .mrf__whatsapp {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .mrf__socials a {
+    font-size: 1.4rem;
+  }
+}
