@@ -80,6 +80,11 @@
   transition: all 0.3s ease;
 }
 
+.service-btn a{
+  color: #fff;
+  text-decoration: none;
+}
+
 .service-btn:hover {
   background: linear-gradient(135deg, #ff5252, #ff2222);
   transform: scale(1.05);

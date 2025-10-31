@@ -31,14 +31,14 @@
 /* Metin alanı */
 .slide-text {
   position: absolute;
-  bottom: 7%;
-  left: 5%;
+  bottom: 60px;
+  left: 60px;
   background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  padding: 25px 30px;
+  color: #ffffff;
+  padding: 25px 35px;
   border-radius: 15px;
   max-width: 700px;
-  width: fit-content;
+  width: auto;
   z-index: 10;
   text-align: left;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
@@ -47,10 +47,10 @@
 }
 
 .slide-title {
-  font-size: clamp(1.8rem, 5vw, 4rem);
+ font-size: 48px;
   font-weight: 800;
   line-height: 1.1;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   text-align: left;
   background: linear-gradient(90deg, #ffffff 0%, #d6d6ff 50%, #a6a6ff 100%);
   -webkit-background-clip: text;
@@ -58,7 +58,7 @@
   color: transparent;
   text-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
   animation: fadeSlideIn 0.9s ease forwards;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 /* Animasyon */
@@ -111,9 +111,164 @@
 .slide-text p {
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   color: #e0e0e0;
+}/* Metin kutusu alanı */
+.slide-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  padding: 25px 35px;
+  border-radius: 15px;
+  max-width: 700px;
+  width: auto;
+  z-index: 10;
+  text-align: left;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  animation: fadeInFast 0.6s ease-in-out;
 }
+
+/* Başlık (İngilizce - büyük) */
+.slide-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-align: left;
+  background: linear-gradient(90deg, #ffffff 0%, #d6d6ff 50%, #a6a6ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  animation: fadeSlideIn 0.9s ease forwards;
+  margin-bottom: 12px;
+}
+
+/* Alt başlık */
+.slide-text h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Açıklama paragrafı */
+.slide-text p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 5px;
+  max-width: 640px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Laptop (1366px altı) */
+@media (max-width: 1366px) {
+  .slide-text {
+    bottom: 50px;
+    left: 50px;
+    padding: 22px 30px;
+    max-width: 600px;
+  }
+  .slide-title {
+    font-size: 42px;
+  }
+  .slide-text h2 {
+    font-size: 24px;
+  }
+  .slide-text p {
+    font-size: 17px;
+  }
+}
+
+/* Tablet (1024px altı) */
+@media (max-width: 1024px) {
+  .slide-text {
+    bottom: 40px;
+    left: 40px;
+    padding: 20px 28px;
+    max-width: 520px;
+  }
+  .slide-title {
+    font-size: 36px;
+  }
+  .slide-text h2 {
+    font-size: 22px;
+  }
+  .slide-text p {
+    font-size: 16px;
+  }
+}
+
+/* Küçük tablet (768px altı) */
+@media (max-width: 768px) {
+  .slide-text {
+    bottom: 30px;
+    left: 30px;
+    padding: 18px 25px;
+    max-width: 480px;
+  }
+  .slide-title {
+    font-size: 30px;
+  }
+  .slide-text h2 {
+    font-size: 20px;
+  }
+  .slide-text p {
+    font-size: 15px;
+  }
+}
+
+/* Telefon (600px altı) */
+@media (max-width: 600px) {
+  .slide-text {
+    bottom: 20px;
+    left: 20px;
+    padding: 15px 20px;
+    max-width: 90%;
+  }
+  .slide-title {
+    font-size: 26px;
+  }
+  .slide-text h2 {
+    font-size: 18px;
+  }
+  .slide-text p {
+    font-size: 14px;
+  }
+}
+
+/* Küçük telefon (400px altı) */
+@media (max-width: 400px) {
+  .slide-text {
+    bottom: 15px;
+    left: 15px;
+    padding: 12px 18px;
+  }
+  .slide-title {
+    font-size: 22px;
+  }
+  .slide-text h2 {
+    font-size: 16px;
+  }
+  .slide-text p {
+    font-size: 13px;
+  }
+}
+
+/* Animasyonlar */
+@keyframes fadeInFast {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
 
 .cta-row {
   display: flex;

@@ -63,7 +63,7 @@
   color: #ff2222;
 }
 
-/* Alt çizgi hover efekti */
+/* Hover alt çizgi */
 .nav-item::after {
   content: "";
   position: absolute;
@@ -81,14 +81,20 @@
 }
 
 /* === WHATSAPP LOGOSU === */
-.logo-container {
-  width: 100%;
+.mrf__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.wp-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
+.mrf__whatsapp:hover {
+  background: var(--link-hover);
+  transform: translateY(-3px);
 }
 
 /* === HAMBURGER BUTONU === */
@@ -97,7 +103,7 @@
   border: none;
   cursor: pointer;
   color: #fff;
-  display: flex;
+  display: none; /* 🔥 masaüstünde gizli */
   align-items: center;
   justify-content: center;
   transition: transform 0.25s ease;
@@ -182,23 +188,64 @@
   border: 1px solid #ccc;
 }
 
-/* === RESPONSIVE AYARLAR === */
-@media (max-width: 768px) {
+/* === RESPONSIVE === */
+
+/* --- Masaüstü (992px ve üstü) --- */
+@media (min-width: 992px) {
   .nav-links {
-    display: none; /* Menü gizlenir */
+    display: flex; /* masaüstü aktif */
   }
 
-  .menu-toggle {
-    display: flex; /* Hamburger görünür */
+  .menu-toggle,
+  .mobile-menu {
+    display: none !important; /* mobil elemanlar gizli */
   }
 }
 
-@media (min-width: 769px) {
+/* --- Mobil (991px ve altı) --- */
+@media (max-width: 991px) {
+  .nav-links {
+    display: none !important; /* masaüstü menü gizli */
+  }
+
   .menu-toggle {
-    display: none; /* Hamburger gizlenir */
+    display: flex; /* hamburger aktif */
   }
 
   .mobile-menu {
-    display: none !important; /* Mobil menü görünmez */
+    display: block;
+  }
+
+  .navbar {
+    padding: 0 18px;
+  }
+}
+
+/* --- Küçük iPhone ve cihazlar --- */
+@media (max-width: 480px) {
+  .header {
+    height: 70px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+  }
+
+  .mobile-menu {
+    top: 70px;
+    right: 10px;
+    left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .mobile-item {
+    font-size: 1.05rem;
   }
 }

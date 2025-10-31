@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp} from 'react-icons/fa';
+
 import { Menu, X } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 import "./header.css";
 import Logo from "../../assets/logo/site_logo.png";
-import WpLogo from "../../assets/icon-img/wp.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,20 +81,9 @@ const Header = () => {
             </motion.a>
           ))}
 
-          <div className="logo-container">
-            <a
-              href="https://api.whatsapp.com/send?phone=905412010801"
-              target="blank"
-            >
-              <img
-                src={WpLogo}
-                alt="wp-logo"
-                width={110}
-                height={50}
-                className="wp-logo"
-              />
-            </a>
-          </div>
+          <a className="mrf__whatsapp" href="https://api.whatsapp.com/send?phone=905412010801" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <FaWhatsapp /> <span>WhatsApp ile iletişime geç</span>
+          </a>
         </nav>
 
         {/* Hamburger Buton */}
@@ -135,21 +125,9 @@ const Header = () => {
               ))}
             </ul>
 
-            <div className="logo-container mobile-only">
-              <a
-                href="https://api.whatsapp.com/send?phone=905412010801"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={WpLogo}
-                  alt="WhatsApp Logo"
-                  width={110}
-                  height={50}
-                  className="wp-logo"
-                />
-              </a>
-            </div>
+             <a className="mrf__whatsapp" href="https://api.whatsapp.com/send?phone=905412010801" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <FaWhatsapp /> <span>WhatsApp ile iletişime geç</span>
+          </a>
           </motion.nav>
         )}
       </AnimatePresence>

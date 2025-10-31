@@ -25,7 +25,6 @@ const slides = [
 const Slider = ({ withHelmet = false }) => {
   const [page, setPage] = useState(0);
 
-
   // Otomatik geçiş
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,10 +32,6 @@ const Slider = ({ withHelmet = false }) => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
-  //slides`daki id`ye göre linkteki sayfaya yönlendirme
-
-  
 
   return (
     <section className="slider-container" aria-label="Ana slider">
