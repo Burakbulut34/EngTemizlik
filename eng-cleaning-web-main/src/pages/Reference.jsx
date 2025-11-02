@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/reference.css";
-
-import ref1 from "../assets/reference/asis-company-img.jpg";
+import Helmet from "../components/Helmet/Helmet";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -15,10 +14,12 @@ const fadeUp = {
 
 const References = ({ withHelmet = false }) => {
   const references = [
-    { name: "asis elektronik ve bilişim sistemleri a.ş.", image: ref1, link: "https://asiselektronik.com.tr/tr/" },
+    { name: "asis elektronik ve bilişim sistemleri a.ş.", image: "https://res.cloudinary.com/dazvkvpch/image/upload/v1762104901/asis-company-img.jpg", link: "https://asiselektronik.com.tr/tr/" },
   ];
 
   return (
+    <>
+    {withHelmet && <Helmet title="Referanslar" />}
     <section className="references-section">
       <div className="references-container">
         <h1 className="references-title">Referanslar</h1>
@@ -48,7 +49,7 @@ const References = ({ withHelmet = false }) => {
           ))}
         </div>
       </div>
-    </section>
+    </section></>
   );
 };
 

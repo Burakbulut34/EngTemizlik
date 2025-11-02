@@ -10,6 +10,7 @@ import OfficeCleaning from "./pages/OfficeCleaning";
 import HomeCleaning from "./pages/HomeCleaning";
 import WindowCleaning from "./pages/WindowCleaning";
 import SofaCleaning from "./pages/SofaCleaning";
+import Reference from "./pages/Reference";
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Home withHelmet={true}/>} />
-          <Route path="/services.html" element={<Services withHelmet={true}/>} />
+          <Route path="/services.html" element={<Services withHelmet={true}/>} />,
+          <Route path="/references.html" element={<Reference withHelmet={true}/>} />,
+
           <Route path="/about.html" element={<About withHelmet={true}/>} />
           <Route path="/contact.html" element={<Contact withHelmet={true}/>} />
           <Route path="/OfficeCleaning.html" element={<OfficeCleaning withHelmet={true}/>} />

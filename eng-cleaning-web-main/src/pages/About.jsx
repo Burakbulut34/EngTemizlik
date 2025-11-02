@@ -71,10 +71,10 @@ const About = ({ withHelmet = false }) => {
       <div className="image-column col-lg-6 col-md-12 col-sm-12 order-1 order-lg-2">
         <div className="inner-column">
           <figure className="image-1">
-            <img src="https://img.freepik.com/free-photo/full-shot-people-cleaning-office_23-2150454494.jpg?t=st=1761681361~exp=1761684961~hmac=c60457214e802cb72fe19d7791656bc2b73bd0bfaf7c595e0437a0889fcfc54b&w=1480" alt="About 1" />
+            <img src="https://res.cloudinary.com/dazvkvpch/image/upload/v1762105611/full-shot-woman-cleaning-indoors.jpg" alt="About 1" />
           </figure>
           <figure className="image-2">
-            <img src="https://img.freepik.com/free-photo/medium-shot-woman-cleaning-home_23-2150453325.jpg?t=st=1761681448~exp=1761685048~hmac=b5a655b2275a6036ad8fa59e74146b8fc4b2e8a28f152e4b28c1453bcb5c63b1&w=1480" alt="About 2"  width={500} height={500}/>
+            <img src="https://res.cloudinary.com/dazvkvpch/image/upload/v1762105560/full-shot-people-cleaning-office.jpg" alt="About 2"  width={500} height={500}/>
           </figure>
         </div>
       </div>

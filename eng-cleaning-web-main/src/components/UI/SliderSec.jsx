@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/slider.css";
-import img01 from "../../assets/slider-img/medium-shot-woman-cleaning-home.jpg";
-import img02 from "../../assets/slider-img/professional-cleaning-service-person-using-vacuum-cleaner-office.jpg";
-//import img04 from "../../assets/slider-img/workers-washing-windows-office-building.jpg";
 const slides = [
   {
     id: 1,
-    image: img01,
+    image: "https://res.cloudinary.com/dazvkvpch/image/upload/v1762104900/medium-shot-woman-cleaning-home.jpg",
     titleEng: "ENGTEMİZLİK",
     title: "Ev Temziliği",
     description: "Konforunuzu ve zarafeti bir araya getiriyoruz. Deneyimli ekibimiz, profesyonel ekipman ve hijyenik ürünlerle evinizin her köşesinde kusursuz temizlik sağlar.<br> Tozdan, lekeden ve dağınıklıktan uzak; ferah, pırıl pırıl bir yaşam alanı sizi bekliyor. Ev temizliğinde kalite, detaylarda saklıdır <br>Biz o detayları sizin için düşünüyoruz.",
@@ -14,7 +11,7 @@ const slides = [
   },
   {
     id: 2,
-    image: img02,
+    image: "https://res.cloudinary.com/dazvkvpch/image/upload/v1762106589/people-taking-care-office-cleaning.jpg",
     titleEng: "ENGTEMİZLİK",
     title: "Ofis Temizliği",
     description: "Ofisiniz, işinizin vitrini! Profesyonel temizlik ekibimizle çalışma alanlarınızı hijyenik, ferah ve düzenli hale getiriyoruz. Tozdan arınmış masalar, pırıl pırıl camlar ve tertemiz bir ortamla verimliliğinizi artırın. Siz işinize odaklanın, temizlik detaylarını bize bırakın!",
@@ -22,7 +19,7 @@ const slides = [
   },
 ];
 
-const Slider = ({ withHelmet = false }) => {
+const Slider = () => {
   const [page, setPage] = useState(0);
 
   // Otomatik geçiş

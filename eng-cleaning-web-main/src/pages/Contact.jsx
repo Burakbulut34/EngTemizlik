@@ -1,61 +1,62 @@
 import React from "react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import  Helmet  from "../components/Helmet/Helmet";
 import "../styles/contact.css";
-import Helmet from "../components/Helmet/Helmet";
 
-export default function Contact({ withHelmet = false }) {
+const Contact = () => {
   return (
-    <section className="contact">
-        {withHelmet && <Helmet title="İletişim  " />}
-      <div className="contact__container">
-        {/* Sol Taraf */}
-        <div className="contact__info">
-          <h2 className="contact__title">Bizimle İletişime Geçin</h2>
-          <p className="contact__desc">
-            Kloxyn ekibi olarak sizinle her zaman iletişimde olmaktan mutluluk duyarız.
-            Sorularınızı, önerilerinizi veya iş birliği taleplerinizi bize ulaştırabilirsiniz.
-          </p>
+    <>
+      <Helmet title="İletişim" />
+      <section className="contact-section">
+        <div className="contact-container">
 
-          <div className="contact__details">
-            <div className="contact__item">
-              <FaPhoneAlt className="contact__icon" />
-              <span>+90 541 201 08 01</span>
-            </div>
-            <div className="contact__item">
-              <FaEnvelope className="contact__icon" />
-              <span>info@engtemizlik.com</span>
-            </div>
-            <div className="contact__item">
-              <FaMapMarkerAlt className="contact__icon" />
-              <span>İstanbul, Türkiye</span>
+          {/* Sol Taraf - Form */}
+          <div className="contact-form">
+            <h2 className="contact-title">Bize Ulaşın</h2>
+            <p className="contact-desc">
+              Aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz.
+            </p>
+            <form>
+              <div className="form-group">
+                <label>Ad Soyad</label>
+                <input type="text" placeholder="Adınızı girin" required />
+              </div>
+              <div className="form-group">
+                <label>E-posta</label>
+                <input type="email" placeholder="E-posta adresiniz" required />
+              </div>
+              <div className="form-group">
+                <label>Konu</label>
+                <input type="text" placeholder="Mesaj konusu" />
+              </div>
+              <div className="form-group">
+                <label>Mesaj</label>
+                <textarea rows="5" placeholder="Mesajınızı yazın" required></textarea>
+              </div>
+              <button type="submit" className="contact-btn">Gönder</button>
+            </form>
+          </div>
+
+          {/* Sağ Taraf - Bilgiler */}
+          <div className="contact-info">
+            <h3>İletişim Bilgileri</h3>
+            <ul>
+              <li><strong>📍 Adres:</strong> İstanbul, İstanbul</li>
+              <li><strong>📞 Telefon:</strong> +90 541 201 08 01</li>
+              <li><strong>✉️ E-posta:</strong> info@engtemizlik.com</li>
+            </ul>
+            <div className="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192697.88850531832!2d28.847372628072865!3d41.00546324300304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1762107056795!5m2!1str!2str"
+                loading="lazy"
+                title="map"
+              ></iframe>
             </div>
           </div>
 
-          <div className="contact__socials">
-            <a href="/" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="/" aria-label="Instagram"><FaInstagram /></a>
-            <a href="/" aria-label="Twitter"><FaTwitter /></a>
-            <a href="/" aria-label="LinkedIn"><FaLinkedinIn /></a>
-          </div>
         </div>
-
-        {/* Sağ Taraf - Form */}
-        <div className="contact__form">
-          <h3>Bize Mesaj Gönderin</h3>
-          <form>
-            <div className="form__group">
-              <input type="text" placeholder="Adınız" required />
-            </div>
-            <div className="form__group">
-              <input type="email" placeholder="E-posta adresiniz" required />
-            </div>
-            <div className="form__group">
-              <textarea placeholder="Mesajınız" rows="5" required></textarea>
-            </div>
-            <button type="submit" className="btn__submit">Gönder</button>
-          </form>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
-}
+};
+
+export default Contact;

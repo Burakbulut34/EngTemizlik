@@ -5,7 +5,6 @@ import { FaWhatsapp} from 'react-icons/fa';
 import { Menu, X } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 import "./header.css";
-import Logo from "../../assets/logo/site_logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +13,7 @@ const Header = () => {
   const navLinks = [
     { name: "Anasayfa", href: "/" },
     { name: "Hizmetler", href: "/services.html" },
+    { name: "Referanslar", href: "/references.html" },
     { name: "Hakkımızda", href: "/about.html" },
     { name: "İletişim", href: "/contact.html" },
   ];
@@ -62,7 +62,7 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src={Logo} alt="site-logo" width={100} height={100} />
+          <img src="https://res.cloudinary.com/dazvkvpch/image/upload/v1762104906/site_logo.png" alt="site-logo" width={100} height={100} />
         </motion.a>
 
         {/* Masaüstü Menü */}
