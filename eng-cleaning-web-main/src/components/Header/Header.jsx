@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaWhatsapp} from 'react-icons/fa';
-
+import { motion } from "framer-motion"; // Sadece logo için
+import { FaWhatsapp } from 'react-icons/fa';
 import { Menu, X } from "lucide-react";
-import { Link as ScrollLink } from "react-scroll";
 import "./header.css";
 
 const Header = () => {
@@ -40,17 +38,6 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: top - 70,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar">
@@ -71,11 +58,10 @@ const Header = () => {
             <motion.a
               key={idx}
               className="nav-item"
-              onClick={() => scrollToSection(link.href.replace("#", ""))}
+              href={link.href}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              href={link.href}
             >
               {link.name}
             </motion.a>
@@ -96,41 +82,35 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobil Menü */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.nav
-            className="mobile-menu"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <ul>
-              {navLinks.map((link, idx) => (
-                <li key={idx}>
-                  <ScrollLink
-                    onClick={() => {
-                      scrollToSection(link.href.replace("#", ""));
-                      setIsOpen(false);
-                    }}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    className="mobile-item"
-                  >
-                    {link.name}
-                  </ScrollLink>
-                </li>
-              ))}
-            </ul>
+      {/* Mobil Menü - Animasyon olmadan, basit toggle */}
+      {isOpen && (
+        <nav className="mobile-menu">
+          <ul>
+            {navLinks.map((link, idx) => (
+              <li key={idx}>
+                <a
+                  href={link.href}
+                  className="mobile-item"
+                  onClick={() => setIsOpen(false)} // Sadece menü kapatma
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-             <a className="mrf__whatsapp" href="https://api.whatsapp.com/send?phone=905412010801" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <a
+            className="mrf__whatsapp"
+            href="https://api.whatsapp.com/send?phone=905412010801"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            onClick={() => setIsOpen(false)} // Sadece menü kapatma
+          >
             <FaWhatsapp /> <span>WhatsApp ile iletişime geç</span>
           </a>
-          </motion.nav>
-        )}
-      </AnimatePresence>
+        </nav>
+      )}
     </header>
   );
 };

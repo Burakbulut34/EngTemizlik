@@ -48,7 +48,7 @@ export default function ModernResponsiveFooter() {
 
           <div className="mrf__copy">
             <small>© 2025 EngTemizlik. Tüm hakları saklıdır.</small>
-            <small>Designed by Burak Bulut</small>
+            <small>Designed by <a href="https://burakblog.vercel.app/" target="blank">Burak Bulut</a></small>
           </div>
         </div>
       </div>
