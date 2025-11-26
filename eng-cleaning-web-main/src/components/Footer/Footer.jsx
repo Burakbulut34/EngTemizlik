@@ -48,6 +48,9 @@ export default function ModernResponsiveFooter() {
               <a href="/about.html">Hakkımızda</a>
             </li>
             <li>
+              <a href="/references.html">Referanslar</a>
+            </li>
+            <li>
               <a href="/services.html">Hizmetler</a>
             </li>
             <li>
