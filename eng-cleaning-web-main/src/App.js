@@ -11,6 +11,7 @@ import HomeCleaning from "./pages/HomeCleaning";
 import WindowCleaning from "./pages/WindowCleaning";
 import SofaCleaning from "./pages/SofaCleaning";
 import Reference from "./pages/Reference";
+import BuildingCleaning from "./pages/BuildingCleaning";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/HomeCleaning.html" element={<HomeCleaning withHelmet={true}/>} />
           <Route path="/WindowCleaning.html" element={<WindowCleaning withHelmet={true}/>} />
           <Route path="/SofaCleaning.html" element={<SofaCleaning withHelmet={true}/>} />
+          <Route path="/BuildingCleaning.html" element={<BuildingCleaning withHelmet={true}/>}/>
 
 
 

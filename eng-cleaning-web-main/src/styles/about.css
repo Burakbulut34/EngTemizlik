@@ -228,6 +228,7 @@ section {
 .about-section.animate .list-style-one li:nth-child(2) { transition-delay: 0.7s; }
 .about-section.animate .list-style-one li:nth-child(3) { transition-delay: 0.8s; }
 .about-section.animate .list-style-one li:nth-child(4) { transition-delay: 0.9s; }
+.about-section.animate .list-style-one li:nth-child(5) { transition-delay:  1s; }
 .about-section.animate .btn-box { transition-delay: 1s; }
 
 /* Görseller için küçük scale efekti */

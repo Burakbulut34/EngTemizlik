@@ -37,6 +37,7 @@ const AboutSection = () => {
             <li>Ofis Temizliği</li>
             <li>Koltuk Temizliği</li>
             <li>Cam Temizliği</li>
+
           </ul>
         </div>
       </div>

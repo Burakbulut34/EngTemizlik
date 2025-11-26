@@ -6,8 +6,7 @@ const slides = [
     image: "https://res.cloudinary.com/dazvkvpch/image/upload/v1762104900/medium-shot-woman-cleaning-home.jpg",
     titleEng: "ENGTEMİZLİK",
     title: "Ev Temziliği",
-    description: "Konforunuzu ve zarafeti bir araya getiriyoruz. Deneyimli ekibimiz, profesyonel ekipman ve hijyenik ürünlerle evinizin her köşesinde kusursuz temizlik sağlar.<br> Tozdan, lekeden ve dağınıklıktan uzak; ferah, pırıl pırıl bir yaşam alanı sizi bekliyor. Ev temizliğinde kalite, detaylarda saklıdır <br>Biz o detayları sizin için düşünüyoruz.",
-    link:"/tests"
+    description: "Konforunuzu ve zarafeti bir araya getiriyoruz. Deneyimli ekibimiz, profesyonel ekipman ve hijyenik ürünlerle evinizin her köşesinde kusursuz temizlik sağlar. Tozdan, lekeden ve dağınıklıktan uzak; ferah, pırıl pırıl bir yaşam alanı sizi bekliyor. Ev temizliğinde kalite, detaylarda saklıdır Biz o detayları sizin için düşünüyoruz.",
   },
   {
     id: 2,
@@ -15,8 +14,14 @@ const slides = [
     titleEng: "ENGTEMİZLİK",
     title: "Ofis Temizliği",
     description: "Ofisiniz, işinizin vitrini! Profesyonel temizlik ekibimizle çalışma alanlarınızı hijyenik, ferah ve düzenli hale getiriyoruz. Tozdan arınmış masalar, pırıl pırıl camlar ve tertemiz bir ortamla verimliliğinizi artırın. Siz işinize odaklanın, temizlik detaylarını bize bırakın!",
-    link:"/tests"
   },
+  {
+    id: 3,
+    image: "https://res.cloudinary.com/dazvkvpch/image/upload/v1764162556/building-cleaning.avif",
+    titleEng: "ENGTEMİZLİK",
+    title: "İnşaat Sonrası Temizlik",
+    description: "Toz, alçı, harç? Artık yok. 🚫 Eng Temizlik olarak, inşaat sonrası karmaşayı kusursuz bir hijyene dönüştürüyoruz. Anahtar teslim temizlikle mekânınızı size sadece 'oturmaya hazır' şekilde teslim ediyoruz. Siz konforu planlayın, gerisini titizliğimizin sanatına bırakın!",
+  }
 ];
 
 const Slider = () => {
@@ -42,7 +47,7 @@ const Slider = () => {
         <div key={page} className="slide-text">
           <h1 className="slide-title">{slides[page].titleEng}</h1>
 
-          <br />
+          
           <h2>{slides[page].title}</h2>
           <p>{slides[page].description}</p>
         </div>

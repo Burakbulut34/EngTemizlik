@@ -15,9 +15,9 @@
   width: 100%;
   max-width: 1200px;
   flex-wrap: wrap;
-  bottom: 80px; /* 🔹 Sayfa üstünden boşluk: 50–100px arasında ayarlayabilirsin */
-
+  margin-top: 80px; /* 🔹 Sayfa üstünden 80px aşağı */
 }
+
 
 /* SOL TARAF - FORM */
 .contact-form {
@@ -68,7 +68,7 @@
 
 .contact-btn {
   width: 100%;
-  background: linear-gradient(90deg, #6c63ff, #4a47e0);
+  background: linear-gradient(90deg, #ff2222, #ff5252);
   border: none;
   color: white;
   font-weight: 600;
@@ -79,7 +79,7 @@
 }
 
 .contact-btn:hover {
-  background: linear-gradient(90deg, #4a47e0, #6c63ff);
+  background: linear-gradient(90deg, #ff5252, #ff2222);
   transform: scale(1.03);
 }
 
@@ -97,7 +97,7 @@
 .contact-info h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #a8a8ff;
+  color: #ff2222;
 }
 
 .contact-info ul {

@@ -15,22 +15,22 @@ const Contact = () => {
             <p className="contact-desc">
               Aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz.
             </p>
-            <form>
+            <form action="https://formcarry.com/s/b81c3xSZFjj" method="POST">
               <div className="form-group">
                 <label>Ad Soyad</label>
-                <input type="text" placeholder="Adınızı girin" required />
+                <input type="text" placeholder="Adınızı girin" required  name="Ad - Soyad"/>
               </div>
               <div className="form-group">
                 <label>E-posta</label>
-                <input type="email" placeholder="E-posta adresiniz" required />
+                <input type="email" placeholder="E-posta adresiniz" required name="E-posta"/>
               </div>
               <div className="form-group">
                 <label>Konu</label>
-                <input type="text" placeholder="Mesaj konusu" />
+                <input type="text" placeholder="Mesaj konusu" required name="Konu"/>
               </div>
               <div className="form-group">
                 <label>Mesaj</label>
-                <textarea rows="5" placeholder="Mesajınızı yazın" required></textarea>
+                <textarea rows="5" placeholder="Mesajınızı yazın" required name="Mesaj"></textarea>
               </div>
               <button type="submit" className="contact-btn">Gönder</button>
             </form>

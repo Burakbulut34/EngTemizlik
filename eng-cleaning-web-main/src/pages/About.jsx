@@ -56,13 +56,14 @@ const About = ({ withHelmet = false }) => {
             </p>
           </div>
           <ul className="list-style-one">
+            <li>İnşaat Sonrası Temizlik</li>
             <li>Ev Temizliği</li>
             <li>Ofis Temizliği</li>
             <li>Koltuk Temizliği</li>
             <li>Cam Temizliği</li>
           </ul>
           <div className="btn-box">
-            <a href="/contact.html" className="theme-btn btn-style-one">Detaylı</a>
+            <a href="/s" className="theme-btn btn-style-one">Detaylı</a>
           </div>
         </div>
       </div>

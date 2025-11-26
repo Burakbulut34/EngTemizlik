@@ -3,7 +3,8 @@ import Slider from '../components/UI/SliderSec.jsx'
 import Helmet from '../components/Helmet/Helmet.js'
 import About from './About.jsx'
 import Services from './Service.jsx';
-import References from './Reference.jsx'; 
+import References from './Reference.jsx';
+import '../styles/home.css' 
 
 const Home = () => {
   return (

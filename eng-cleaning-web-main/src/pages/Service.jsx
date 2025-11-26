@@ -46,6 +46,15 @@ const Services = ({ withHelmet = false }) => {
       reverse: true,
       link: "/WindowCleaning.html", 
     },
+
+    {
+      title: "İnşaat Sonrası Temizlik",
+      desc: "Toz, alçı, harç? Artık yok. 🚫 Eng Temizlik olarak, inşaat sonrası karmaşayı kusursuz bir hijyene dönüştürüyoruz. Anahtar teslim temizlikle mekânınızı size sadece 'oturmaya hazır' şekilde teslim ediyoruz. Siz konforu planlayın, gerisini titizliğimizin sanatına bırakın!",
+      img: "https://res.cloudinary.com/dazvkvpch/image/upload/v1764162556/building-cleaning.avif",
+      reverse: false,
+      link: "/BuildingCleaning.html",
+    
+    }
   ];
 
   return (
